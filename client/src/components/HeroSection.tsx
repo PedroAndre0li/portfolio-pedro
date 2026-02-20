@@ -32,8 +32,8 @@ function useCountUp(target: number, duration: number = 2000, start: boolean = fa
 }
 
 const stats = [
-  { value: 15, suffix: "+", label: "Projetos Entregues" },
-  { value: 3, suffix: " anos", label: "de Experiência" },
+  { value: 6, suffix: "+", label: "Projetos Entregues" },
+  { value: 2, suffix: " anos", label: "de Experiência" },
   { value: 100, suffix: "%", label: "Foco em Resultado" },
 ];
 

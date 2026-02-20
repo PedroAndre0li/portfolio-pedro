@@ -16,8 +16,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "E-mail",
-    value: "pedro@andreoli.dev",
-    href: "mailto:pedro@andreoli.dev",
+    value: "pedroandreoli5@gmail.com",
+    href: "mailto:pedroandreoli5@gmail.com",
     color: "text-primary",
   },
   {
@@ -30,8 +30,8 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com", color: "hover:text-foreground" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", color: "hover:text-primary" },
+  { icon: Github, label: "GitHub", href: "https://github.com/PedroAndre0li", color: "hover:text-foreground" },
+  { icon: Linkedin, label: "LinkedIn", href: "www.linkedin.com/in/pedro-nascimento-andreoli-b41a17282", color: "hover:text-primary" },
   { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/5562982933475", color: "hover:text-green-400" },
 ];
 

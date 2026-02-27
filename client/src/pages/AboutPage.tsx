@@ -1,34 +1,29 @@
-/**
- * DESIGN: Restauração do layout original de Pedro Andreoli
- * Ajuste exclusivo de cronologia para 2 anos de experiência (2024-2026)
- */
 import { motion } from "framer-motion";
-import { BookOpen, Scale, Ticket, Rocket } from "lucide-react";
 
 const timeline = [
   {
     id: 1,
     year: "2024",
     title: "Início da Jornada",
-    description: "Início dos estudos em ADS na PUC-GO e primeiros projetos como freelancer desenvolvendo sites e aplicações web em Goiânia."
+    description: "Começou como freelancer desenvolvendo sites e aplicações web para pequenas empresas em Goiânia enquanto iniciava ADS na PUC-GO."
   },
   {
     id: 2,
     year: "2025",
     title: "Primeiro SaaS",
-    description: "Desenvolvimento do Júri, software especializado para escritórios de advocacia, focando em automação e gestão de processos."
+    description: "Desenvolveu o Júri, software especializado para escritórios de advocacia focado em automação e gestão de processos."
   },
   {
     id: 3,
     year: "2025",
     title: "Expansão",
-    description: "Criação do LotoMax, ecossistema inteligente para gestão de loterias com foco em lógica de dados e rede de agentes."
+    description: "Criou o LotoMax, um ecossistema inteligente para gestão de loterias com foco em lógica de dados e rede de agentes."
   },
   {
     id: 4,
-    year: "2024-2026",
+    year: "2026",
     title: "Consolidação",
-    description: "Atuação como desenvolvedor full-stack estratégico e fundação de empresa própria focada em transformação digital."
+    description: "Atua como desenvolvedor full-stack estratégico e fundação de empresa própria focada em transformação digital."
   }
 ];
 

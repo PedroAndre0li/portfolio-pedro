@@ -3,27 +3,27 @@ import { motion } from "framer-motion";
 const timeline = [
   {
     id: 1,
-    year: "2024",
+    year: "2021",
     title: "Início da Jornada",
-    description: "Começou como freelancer desenvolvendo sites e aplicações web para pequenas empresas em Goiânia enquanto iniciava ADS na PUC-GO."
+    description: "Começou como freelancer desenvolvendo sites e aplicações web para pequenas empresas em Goiânia"
   },
   {
     id: 2,
-    year: "2025",
+    year: "2022",
     title: "Primeiro SaaS",
-    description: "Desenvolveu o Júri, software especializado para escritórios de advocacia focado em automação e gestão de processos."
+    description: "Desenvolveu Júri, software especializado para escritórios de advocacia com sucesso no mercado"
   },
   {
     id: 3,
-    year: "2025",
+    year: "2023",
     title: "Expansão",
-    description: "Criou o LotoMax, um ecossistema inteligente para gestão de loterias com foco em lógica de dados e rede de agentes."
+    description: "Criou LotoMax, ecossistema inteligente para gestão de loterias com rede de agentes"
   },
   {
     id: 4,
-    year: "2026",
+    year: "2024-2026",
     title: "Consolidação",
-    description: "Atua como desenvolvedor full-stack estratégico e fundação de empresa própria focada em transformação digital."
+    description: "Atua como desenvolvedor full-stack estratégico, consultando empresas sobre transformação digital"
   }
 ];
 

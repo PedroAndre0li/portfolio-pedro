@@ -1,6 +1,6 @@
 /**
  * DESIGN: "Arquitetura de Negócios" — Corporate Dark Premium
- * Cards de projetos reais com imagens geradas, badges e links para demos
+ * Restaurando todos os projetos originais (Júri, LotoMax, Marketplace, Dashboard)
  */
 import { motion } from "framer-motion";
 import { ExternalLink, Scale, Ticket, ShoppingCart, LayoutDashboard, ArrowRight } from "lucide-react";
@@ -16,8 +16,7 @@ const projects = [
     id: "juri",
     title: "Júri",
     subtitle: "Software Jurídico",
-    description:
-      "Sistema especializado para escritórios de advocacia e empresas de cobrança. Gestão completa de processos, clientes, prazos e financeiro em um único painel.",
+    description: "Sistema especializado para escritórios de advocacia e empresas de cobrança. Gestão completa de processos, clientes e financeiro.",
     image: JURI_IMG,
     icon: Scale,
     tags: ["React", "Node.js", "PostgreSQL", "TypeScript"],
@@ -26,15 +25,14 @@ const projects = [
     accentColor: "border-primary/40 hover:border-primary/70",
     glowColor: "hover:shadow-primary/20",
     category: "Software Empresarial",
-    features: ["Gestão de Processos", "Controle Financeiro", "Agenda de Prazos", "Relatórios"],
+    features: ["Gestão de Processos", "Controle Financeiro", "Agenda de Prazos"],
     href: null,
   },
   {
     id: "lotomax",
     title: "LotoMax",
     subtitle: "Ecossistema de Loterias",
-    description:
-      "Plataforma inteligente para gestão completa de loterias. Controle de sorteios, rede de agentes, distribuição de prêmios e relatórios em tempo real.",
+    description: "Plataforma inteligente para gestão de loterias. Controle de sorteios, rede de agentes e resultados em tempo real.",
     image: LOTOMAX_IMG,
     icon: Ticket,
     tags: ["React", "Node.js", "Redis", "WebSocket"],
@@ -43,41 +41,39 @@ const projects = [
     accentColor: "border-accent/40 hover:border-accent/70",
     glowColor: "hover:shadow-accent/20",
     category: "Fintech / Loteria",
-    features: ["Gestão de Sorteios", "Rede de Agentes", "Resultados em Tempo Real", "Dashboard Financeiro"],
+    features: ["Gestão de Sorteios", "Rede de Agentes", "Resultados"],
     href: null,
   },
   {
     id: "marketplace",
     title: "Marketplace",
     subtitle: "Vitrine E-commerce",
-    description:
-      "Módulo de marketplace completo com catálogo de produtos, carrinho funcional e fluxo de checkout. Demonstração interativa disponível.",
+    description: "Módulo de marketplace completo com catálogo de produtos, carrinho funcional e fluxo de checkout.",
     image: MARKETPLACE_IMG,
     icon: ShoppingCart,
-    tags: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    tags: ["React", "TypeScript", "Tailwind"],
     status: "Demo Interativa",
     statusColor: "text-blue-400 bg-blue-400/10 border-blue-400/30",
     accentColor: "border-primary/40 hover:border-primary/70",
     glowColor: "hover:shadow-primary/20",
     category: "E-commerce",
-    features: ["Catálogo de Produtos", "Carrinho Funcional", "Checkout Simulado", "Filtros e Busca"],
+    features: ["Catálogo de Produtos", "Carrinho Funcional", "Checkout"],
     href: "/marketplace",
   },
   {
     id: "dashboard",
     title: "SaaS Dashboard",
     subtitle: "Painel Administrativo",
-    description:
-      "Painel de controle para clínicas de estética e escritórios de advocacia em Goiânia. KPIs, agendamentos, financeiro e relatórios.",
+    description: "Painel de controle com KPIs, agendamentos e financeiro para clínicas e escritórios.",
     image: DASHBOARD_IMG,
     icon: LayoutDashboard,
-    tags: ["React", "Recharts", "TypeScript", "Tailwind"],
+    tags: ["React", "Recharts", "TypeScript"],
     status: "Demo Interativa",
     statusColor: "text-blue-400 bg-blue-400/10 border-blue-400/30",
     accentColor: "border-primary/40 hover:border-primary/70",
     glowColor: "hover:shadow-primary/20",
     category: "SaaS / Gestão",
-    features: ["KPIs em Tempo Real", "Gestão de Clientes", "Controle Financeiro", "Agendamentos"],
+    features: ["KPIs Tempo Real", "Gestão de Clientes", "Financeiro"],
     href: "/dashboard",
   },
 ];
@@ -86,76 +82,32 @@ export default function ProjectsSection() {
   return (
     <section id="projetos" className="py-24 relative">
       <div className="section-divider mb-24 -mt-24" />
-
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/3 left-0 w-72 h-72 rounded-full bg-primary/3 blur-3xl" />
-        <div className="absolute bottom-1/3 right-0 w-72 h-72 rounded-full bg-accent/3 blur-3xl" />
-      </div>
-
       <div className="container relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
-          <p className="text-xs font-mono text-primary uppercase tracking-widest mb-3">
-            — Portfólio
-          </p>
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-16">
+          <p className="text-xs font-mono text-primary uppercase tracking-widest mb-3">— Portfólio</p>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
             <h2 className="text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
-              Projetos Realizados
-              <br />
-              <span className="gradient-text">e em Andamento</span>
+              Projetos Realizados<br /><span className="gradient-text">e em Andamento</span>
             </h2>
             <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-              Cada projeto foi construído pensando em resultado real para o negócio, não apenas em código bonito.
+              Cada projeto foi construído focando em resultados para o negócio e eficiência operacional.
             </p>
           </div>
           <div className="accent-line mt-6 w-24" />
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon;
             const CardContent = (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative rounded-2xl bg-card border ${project.accentColor} overflow-hidden card-hover ${project.glowColor} transition-all duration-300 cursor-pointer`}
-              >
-                {/* Image */}
+              <motion.div key={project.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }} className={`group relative rounded-2xl bg-card border ${project.accentColor} overflow-hidden card-hover ${project.glowColor} transition-all duration-300 cursor-pointer`}>
                 <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-
-                  {/* Category badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 text-xs font-mono bg-background/80 backdrop-blur-sm text-muted-foreground border border-border rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* Status badge */}
                   <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 text-xs font-semibold border rounded-full ${project.statusColor}`}>
-                      {project.status}
-                    </span>
+                    <span className={`px-3 py-1 text-xs font-semibold border rounded-full ${project.statusColor}`}>{project.status}</span>
                   </div>
                 </div>
-
-                {/* Content */}
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
@@ -167,54 +119,16 @@ export default function ProjectsSection() {
                         <p className="text-xs text-muted-foreground">{project.subtitle}</p>
                       </div>
                     </div>
-                    {project.href && (
-                      <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <ExternalLink className="w-4 h-4 text-primary" />
-                      </div>
-                    )}
+                    {project.href && <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center"><ExternalLink className="w-4 h-4 text-primary" /></div>}
                   </div>
-
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="grid grid-cols-2 gap-1.5 mb-4">
-                    {project.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <div className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Tags */}
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-0.5 text-xs font-mono bg-secondary text-muted-foreground rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                    {project.href && (
-                      <span className="ml-auto flex items-center gap-1 text-xs text-primary font-semibold">
-                        Ver Demo <ArrowRight className="w-3 h-3" />
-                      </span>
-                    )}
+                    {project.tags.map((tag) => <span key={tag} className="px-2 py-0.5 text-xs font-mono bg-secondary text-muted-foreground rounded">{tag}</span>)}
                   </div>
                 </div>
               </motion.div>
             );
-
-            return project.href ? (
-              <Link key={project.id} href={project.href}>
-                {CardContent}
-              </Link>
-            ) : (
-              <div key={project.id}>{CardContent}</div>
-            );
+            return project.href ? <Link key={project.id} href={project.href}>{CardContent}</Link> : <div key={project.id}>{CardContent}</div>;
           })}
         </div>
       </div>
